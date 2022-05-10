@@ -13,16 +13,16 @@ const Login = (props) => {
                 </div>
             </Nav>
             <Section>
-               <Hero>
-                   <h1>Welcome to your professional community</h1>
-                   <img src='images/login-hero.svg' alt=''/>
-               </Hero>
-               <Form>
-                   <Google>
+                <Hero>
+                    <h1>Welcome to your professional community</h1>
+                    <img src='images/login-hero.svg' alt='' />
+                </Hero>
+                <Form>
+                    <Google>
                         <img src='images/google.svg' alt='' />
                         Sign in with Google
-                   </Google>
-               </Form>
+                    </Google>
+                </Form>
             </Section>
         </Container>
     )
@@ -51,7 +51,7 @@ const Nav = styled.nav`
 
 `;
 
-const Join= styled.a`
+const Join = styled.a`
     font-size: 16px;
     padding: 10px 12px;
     text-decoration: none;
@@ -66,7 +66,7 @@ const Join= styled.a`
     }
 `;
 
-const SignIn= styled.a`
+const SignIn = styled.a`
     box-shadow: inset 0 0 0 1px #0a66c2;
     color: #0a66c2;
     border-radius: 24px;
@@ -85,7 +85,7 @@ const SignIn= styled.a`
     }
 `;
 
-const Section= styled.section`
+const Section = styled.section`
 display: flex;
 align-content: start;
 min-height: 700px;
@@ -122,14 +122,17 @@ h1{
         line-height: 2;
         
     }
+}
 
     img {
-        z-index: -1; //overlap avoid
+        //z-index: -1; //overlap avoid
         width: 700px;
         height: 670px;
         position: absolute;
         bottom: -2px;
         right: -150px;
+
+
         @media (max-width: 768px) {
             top: 230px;
             width: initial;
@@ -137,7 +140,7 @@ h1{
             height: initial;
         }
     }
-}
+
 `;
 
 const Form = styled.div`
@@ -151,7 +154,7 @@ const Form = styled.div`
  }
 `;
 
-const Google= styled.button`
+const Google = styled.button`
 display: flex;
 justify-content: center;
 background-color: #fff;
