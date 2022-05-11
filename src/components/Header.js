@@ -61,6 +61,11 @@ const Header = (props) => {
                                 <span>Me</span>
                                 <img src="/images/down-icon.svg" alt="" />
                             </a>
+                            <SignOut>
+                                <a>
+                                    Sign Out
+                                </a>
+                            </SignOut>
                         </User>
 
                         <Work>
@@ -211,10 +216,52 @@ const NavList = styled.li`
     }
 `;
 
-const User = styled(NavList)``;
+const SignOut = styled.div`
+    position: absolute;
+    top: 45px;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    transition-duration: 167ms;
+    text-align: center;
+    display: none;
+`;
 
-const Work = styled(User)``;
+const User = styled(NavList)`
 
+//User section style and control i.e Me section on nav bar
+
+ a>svg {
+     width: 24px;
+     border-radius: 50%
+ }
+
+ a>img {
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+
+ }
+
+ span {
+     display: flex;
+     align-items: center;
+ }
+
+&:hover {
+    ${SignOut} {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    }
+}
+`;
+
+const Work = styled(User)`
+    border-left: 1px solid rgba(0,0,0,0.08); //border beside work section
+`;
 
 
 export default Header;
