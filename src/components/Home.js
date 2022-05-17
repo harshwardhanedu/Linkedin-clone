@@ -62,7 +62,7 @@ const Layout = styled.div`
     display: grid;
     grid-template-columns: "leftside main rightside";
     // Content column sepration below hiring a hurry 
-    grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr); // Main side is aligned from this code
     column-gap: 25px;
     row-gap: 25px;
    //  grid-template-rows: auto;
