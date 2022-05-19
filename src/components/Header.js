@@ -202,7 +202,7 @@ const NavList = styled.li`
             align-items: center;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 768px) {  
             min-width: 70px;
         }
     }

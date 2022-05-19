@@ -51,7 +51,7 @@ const Leftside = (props) => {
 };
 
 const Container = styled.div`
-    grid-area: auto; //Changed for position
+    grid-area: auto; //Changed for position: ;
     
 `;
 
