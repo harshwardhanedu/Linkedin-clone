@@ -4,13 +4,18 @@ const Main = (props) => {
     return (
     <Container>
         <ShareBox>Share</ShareBox>
+        <div>
+            <img src="./images/user.svg " />
+            <button>Start a post</button>
+        </div>
+
     </Container>
     
     );
 };
 
 const Container = styled.div`
-    grid-area: auto; //Changed for position
+    grid-area: main; //Changed for position
     
 `;
 
