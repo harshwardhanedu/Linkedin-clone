@@ -64,6 +64,24 @@ const Main = (props) => {
                         <a>2 Comments</a>
                     </li>
                 </SocialCounts>
+                <SocialActions>
+                <button>
+                    <img src="./images/like-icon.svg" alt="" />
+                    <span>Like</span>
+                </button>
+                <button>
+                    <img src="./images/comment-icon.svg" alt="" />
+                    <span>Comments</span>
+                </button>
+                <button>
+                    <img src="./images/share-icon.svg" alt="" />
+                    <span>Share</span>
+                </button>
+                <button>
+                    <img src="./images/send-icon.svg" alt="" />
+                    <span>Send</span>
+                </button>
+                </SocialActions>
             </Article>
         </div>
     </Container>
@@ -240,11 +258,12 @@ const SocialCounts = styled.ul`
         font-size: 12px;
         button{
             display: flex;
-            
+
         }
     }
 `;
 
- 
+ const SocialActions = styled.div``;
+// here 3.35
 
 export default Main;
