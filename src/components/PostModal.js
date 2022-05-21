@@ -170,7 +170,7 @@ const ShareComment = styled.div`
 
 const PostButton = styled.button`
     min-width: 60px;
-    border-radius: 20px;
+    border-radius: 20px; 
     padding-left: 16px;
     padding-right: 16px;
     background: ${(props) => (props.disabled ? "rgba(0,0,0,0.8)" : "#0a66c2")};
