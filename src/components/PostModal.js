@@ -177,7 +177,7 @@ const PostButton = styled.button`
     color: ${(props) => (props.disabled ? "rgba(1,1,1,0.2)" : "white")};
 
     &:hover{
-        background: ${(props) => (props.disabled ? "rgba(0,0,0,0.08)" : "#004182")};
+        background: ${(props) => (props.disabled ? "rgba(0,0,0,0.08)" : "#004182")}; //here
     }
 `;
 
