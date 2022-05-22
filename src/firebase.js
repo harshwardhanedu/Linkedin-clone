@@ -3,6 +3,7 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
 
+
 // it was import firebase from "firebase" but to support v8 i added aditional this packages
 
 const firebaseConfig = {
@@ -24,5 +25,5 @@ const firebaseConfig = {
 
   const storage = firebase.storage();
 
-  export {auth,provider,storage};
+  export {auth,provider,storage,firebaseApp};
   export default db;

@@ -1,4 +1,5 @@
 import { auth, provider, storage } from "../firebase";
+import db from '../firebase';
 import { SET_USER } from "./actionType";
 
 export const setUser = (payload) => ({
@@ -44,18 +45,30 @@ export function postArticleAPI(payload){
         .ref(`images/${payload.image.name}`)
         .put(payload.image);
         upload.on('state_changed',
-        snapshot => {
+        (snapshot) => {
             const progress = (
                 (snapshot.bytesTransferred / snapshot.totalBytes) * 100);
   
       
-        console.log(`progress: $(progress)%`);
+        console.log(`progress: ${progress}%`);
         if(snapshot.state === 'RUNNING'){
-            console.log(`progress: $(progress)%`);
+            console.log(`progress: ${progress}%`);
         }
             }, error => console.log(error.code),
             async() => {
                 const downloadURL = await upload.snapshot.ref.getDownloadURL();
+                db.collection("articles").add({
+                    actor: {
+                        description: payload.user.email,
+                        title: payload.displayName,
+                        date: payload.timestamp,
+                        image: payload.user.photoURL
+                    },
+                    video: payload.video,
+                    shardImg: downloadURL,
+                    Comments: 0,
+                    description: payload.description,
+                })
             }
          );
         }
